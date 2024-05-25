@@ -39,6 +39,7 @@
     flex-grow: 2;
     display:flex;
     align-items: flex-start;
+    height:100%;
     
 }
 
@@ -49,6 +50,7 @@
     padding: 10px;
 }
 .menuBar .menuLists li{
+    
     display: inline-block;
     font-size: 25px;
     font-weight: bold;
