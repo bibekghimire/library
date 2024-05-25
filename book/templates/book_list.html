@@ -1,0 +1,40 @@
+{% extends "home.html" %}
+{% load static %}
+{% block title %}Book List{% endblock %}
+
+{% block othercss %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'book/css/book-list.css' %}">
+{% endblock %}
+
+
+{% block book_list %}
+<div class="books-list">
+
+{% if user.is_authenticated %}
+<h1>Available Books</h1>
+<table>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>ISBN</th>
+      <th>Total Copies</th>
+      <th>Available Copies</th>
+    </tr>
+    {% for book in books %}
+    <tr>
+      <td>{{ book.title }}</td>
+      <td>{{ book.author }}</td>
+      <td>{{ book.isbn }}</td>
+      <td>{{ book.total_copies }}</td>
+      <td>{{ book.available_stock }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+{% else %}
+  <p>You are not logged in, please login to continue</p>
+  <p><a href="{% url 'login' %}">Log In</a></p>
+{% endif %}
+</div>
+{% endblock %} 

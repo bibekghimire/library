@@ -1,0 +1,49 @@
+/* .noLogin{
+      top:120px;
+      
+}
+
+.login-link{
+        width: 100%;
+        font-size:x-large;
+        background-color: #f1f1f1;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.menuBar{
+        background-color: rgba(135, 245, 212, 0.644);
+        width:100%;
+        height:auto;
+        position: sticky;
+        top:0;
+    }
+    .menuBar .menuLists a{
+        text-decoration: none;
+        color: black;
+        display:block;
+        padding: 10px;
+    }
+    .menuBar .menuLists li{
+        display: inline-block;
+        font-size: 25px;
+        font-weight: bold;
+        margin:0px;
+        padding:0px;
+    }
+    
+    .menuBar .menuLists li a.active{
+        background-color: blueviolet;
+        color:white;
+    }
+    
+    .menuBar .menuLists{
+        text-align: center;
+        padding-left: 25px;
+        
+    }
+    
+    .menuBar .menuLists li:hover{
+        background-color: rgb(255, 255, 255);
+        color:rgb(15, 13, 13);
+    } */

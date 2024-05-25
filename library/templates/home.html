@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block css %}
+{{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/homestyle.css' %}">
+{% endblock %}
+
+{% block othercss %}{% endblock %}
+
+{% block content %}
+
+<!-- authincate user -->
+{% if user.is_authenticated %}
+
+<div class="menuBar">
+  <div class="userIntro">
+    <span>Hello! {{ user.last_name }}, {{ user.first_name }}!</span> 
+  </div>
+ 
+  <div class="menuLists">
+    <ul class="menuitems">
+
+      <li> <a href="{% url 'home' %}">Home</a></li>
+      <li><a href="{% url 'book_list' %}">Books</a></li>
+      <li><a href="{% url 'borrowed_books' %}">Borrowed Books</a></li>
+     </ul>
+  </div>
+ 
+  <div class="acc">
+    <img src="{% static 'book/images/tree.png' %}">
+    <div class="accMenu">
+      <p><a href="{% url 'password_change' %}">Change Password </a></p>
+      <!-- <form action="{% url 'logout' %}" method="post">
+       {% csrf_token %}
+       <a href="#" onclick="document.getElementById('logout-form').submit(); return false;">Log Out</a>
+    
+      </form> -->
+      <form id="logout-form" action="{% url 'logout' %}" method="post" style="display: none;">
+        {% csrf_token %}
+    </form>
+    <a href="#" onclick="document.getElementById('logout-form').submit(); return false;">Log Out</a>
+</nav>
+    </div>
+    
+  </div>
+  
+</div>
+<div class="book-view">
+  {% block book_list %}{% endblock %}
+  {% block borrowed_list %}{% endblock %}
+</div>
+
+{% else %}
+<div class="noLogin">
+  <p style="font-size: x-large;">You are not logged in</p>
+  <div class="login-link">
+    <p><a href="{% url 'login' %}">Log In</a></p>
+  </div>
+</div>
+
+{% endif %}
+
+<!-- user authintication block  -->
+{% endblock %} 

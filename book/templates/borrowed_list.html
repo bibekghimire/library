@@ -1,0 +1,32 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %} Borrowed list {% endblock %}
+
+{% block othercss %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'book/css/book-list.css' %}">
+{% endblock %}
+
+  {% block borrowed_list %}
+  <div class="books-list">
+<h1>Books Borrowed</h1>
+<p> Borrowed User: {{user.username}} </p>
+<table>
+    <tr>
+      <th>Book Title</th>
+      <th>Borrow Date</th>
+      <th>Due Date</th>
+    </tr>
+    {% for borrow in borrows %}
+    <tr>
+      <td>{{ borrow.book.title }}</td>
+      <td>{{ borrow.borrow_date }}</td>
+      <td>{{ borrow.due_date }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+</div>
+
+{% endblock %}
