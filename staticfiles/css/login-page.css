@@ -3,18 +3,20 @@
     background-color: #66818b;
     padding: 20px;
     border-radius: 5px;
+    width:fit-content; 
 
   }
 
   h2{
     color: white;
-    font-size: 35px;
+    font-size: 35px; 
   }
-  .other-blocks label {
-    color:blue;
+  .login-form label {
+    color:rgb(245, 112, 71);
     font-weight: bold;
     margin-bottom: 5px;
-    display: block; 
+    display: block;
+    font-size: larger; 
   }
 
 

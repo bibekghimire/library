@@ -8,11 +8,12 @@
 <link rel="stylesheet" href="{% static 'book/css/book-list.css' %}">
 {% endblock %}
 
+
   {% block borrowed_list %}
-  <div class="books-list">
-<h1>Books Borrowed</h1>
-<p> Borrowed User: {{user.username}} </p>
-<table>
+<div class="books-list">
+  <h1>Books Borrowed</h1>
+  <p> Borrowed User: {{user.username}} </p>
+  <table>
     <tr>
       <th>Book Title</th>
       <th>Borrow Date</th>

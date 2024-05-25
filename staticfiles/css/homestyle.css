@@ -1,49 +1,124 @@
-/* .noLogin{
+.noLogin{
       top:120px;
-      
+      width:fit-content;
+      margin:10px;
 }
 
 .login-link{
         width: 100%;
         font-size:x-large;
-        background-color: #f1f1f1;
         padding: 10px;
         box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        background-color: blue;
+        text-align: center;
+        border-radius: 55%;
+}
+
+.login-link a {
+    color:white;
+    text-decoration: none;
 }
 
 .menuBar{
-        background-color: rgba(135, 245, 212, 0.644);
-        width:100%;
-        height:auto;
-        position: sticky;
-        top:0;
-    }
-    .menuBar .menuLists a{
-        text-decoration: none;
-        color: black;
-        display:block;
-        padding: 10px;
-    }
-    .menuBar .menuLists li{
-        display: inline-block;
-        font-size: 25px;
-        font-weight: bold;
-        margin:0px;
-        padding:0px;
-    }
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width:99%;
+    height:100px;
+    background-color: rgb(27, 134, 228);
+    position: sticky;
+    top:0;
+}
+.menuBar .userIntro{
+    color:white;
+    padding:2px;
+}
+.menuBar .menuLists{
+    flex-grow: 2;
+    display:flex;
+    align-items: flex-start;
+    height:100%; 
     
-    .menuBar .menuLists li a.active{
-        background-color: blueviolet;
-        color:white;
-    }
+}
+
+.menuBar .menuLists a{
+    text-decoration: none;
+    color: black;
+    display:block;
+    padding: 10px;
+}
+.menuBar .menuLists li{
     
-    .menuBar .menuLists{
-        text-align: center;
-        padding-left: 25px;
-        
-    }
+    display: inline-block;
+    font-size: 25px;
+    font-weight: bold;
+    margin:0px;
+    padding:0px;
+}
+
+.menuBar .menuLists li a.active{
+    background-color: blueviolet;
+    color:white;
+}
+
+.menuBar .menuLists{
+    text-align: center;
+    padding-left: 25px;
     
-    .menuBar .menuLists li:hover{
-        background-color: rgb(255, 255, 255);
-        color:rgb(15, 13, 13);
-    } */
+}
+
+.menuBar .menuLists li:hover{
+    background-color: rgb(255, 255, 255);
+    color:rgb(15, 13, 13);
+}
+
+.acc{
+    cursor:pointer;
+}
+
+.acc img{
+    position:relative;
+    display: inline-block;
+
+    height:60px;
+    border: 2px solid rgba(219, 245, 74, 0.938);
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.acc:hover {
+
+    & img{
+        border: 2px solid white;
+
+    }
+    & .accMenu{
+        display: block;
+    }
+background-color: none;
+}
+
+.accMenu{
+    display:none;
+    position:absolute;
+    right:40px;
+    top:70px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.accMenu a,
+.accMenu form button {
+    color:black;
+    padding: 12px 16px;
+    text-decoration:none;
+    display:block;
+}
+
+.acc .accMenu *:hover{
+    background-color: #f1f1f1;
+
+}
