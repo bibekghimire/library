@@ -8,7 +8,7 @@ from django.utils import timezone
 
 
 def get_due_date():
-    return timezone.now()+timedelta(days=45)
+    return timezone.now()+timedelta(days=45) 
 
 class Book(models.Model):
     title=models.CharField(max_length=200)
@@ -39,7 +39,7 @@ class Borrow(models.Model):
     def delete(self, *args, **kwargs):
         self.book.available_stock+=1
         self.book.save()
-        super.delete(*args, **kwargs)
+        super().delete(*args, **kwargs)
 
     def __str__(self):
         return f"{self.book.title} borrowed by {self.usr.first_name} {self.usr.last_name} {self.borrow_date}"
