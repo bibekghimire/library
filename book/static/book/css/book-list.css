@@ -1,7 +1,34 @@
 .book-view{
-    border:2px solid black;
-    width:100%;
+    /* border:2px solid black; */
+    width:70%;
     display:flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: center; 
+    margin-top: 20px;
+    background-color: peachpuff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: -1;
+}
+
+.book-view .books-list h1{
+    color:blue;
+
+}
+.book-view .books-list table{
+    width:100%;
+    background-color: aqua;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+.book-view .books-list table,
+.book-view .books-list th,
+.book-view .books-list td {
+    border: 1px solid;
+}
+
+.book-view .books-list th,
+.book-view .books-list td {
+    padding:15px;
+    text-align: left;
 }

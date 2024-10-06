@@ -1,6 +1,5 @@
 {% extends 'home.html' %}
 {% load static %}
-
 {% block title %} Borrowed list {% endblock %}
 
 {% block othercss %}
@@ -11,23 +10,31 @@
 
   {% block borrowed_list %}
 <div class="books-list">
-  <h1>Books Borrowed</h1>
-  <p> Borrowed User: {{user.username}} </p>
+  {% if user.is_authenticated %}
+  <h1>Books Borrowed by: {{user.username}} </h1><p> {{ user.first_name }} {{ user.last_name }}</p>
   <table>
     <tr>
-      <th>Book Title</th>
+      <th>Title</th>
+      <th>Author</th>
       <th>Borrow Date</th>
+      <th>ISBN</th>
       <th>Due Date</th>
     </tr>
     {% for borrow in borrows %}
     <tr>
       <td>{{ borrow.book.title }}</td>
+      <td>{{ borrow.book.author }}</td>
       <td>{{ borrow.borrow_date }}</td>
+      <td>{{ borrow.book.isbn }}</td>
       <td>{{ borrow.due_date }}</td>
     </tr>
     {% endfor %}
   </table>
 
+  {% else %}
+  <p>You are not logged in, please login to continue</p>
+  <p><a href="{% url 'login' %}">Log In</a></p>
+{% endif %}
 </div>
 
 {% endblock %}

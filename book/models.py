@@ -8,7 +8,7 @@ from django.utils import timezone
 
 
 def get_due_date():
-    return timezone.now()+timedelta(days=45)
+    return timezone.now()+timedelta(days=45) 
 
 class Book(models.Model):
     title=models.CharField(max_length=200)

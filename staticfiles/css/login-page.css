@@ -1,6 +1,6 @@
 .login-form {
     margin-top: 100px;
-    background-color: #66818b;
+    background-color: rgb(72, 173, 240);
     padding: 20px;
     border-radius: 5px;
     width:fit-content; 
@@ -12,7 +12,7 @@
     font-size: 35px; 
   }
   .login-form label {
-    color:rgb(245, 112, 71);
+    color:rgb(42, 61, 48);
     font-weight: bold;
     margin-bottom: 5px;
     display: block;

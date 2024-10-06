@@ -1,6 +1,6 @@
-{% extends "home.html" %}
+{% extends 'home.html' %}
 {% load static %}
-{% block title %}Book List{% endblock %}
+{% block title %} Borrowed list {% endblock %}
 
 {% block othercss %}
 {{ block.super }}
@@ -10,7 +10,6 @@
 
 {% block book_list %}
 <div class="books-list">
-
 {% if user.is_authenticated %}
 <h1>Available Books</h1>
 <table>
