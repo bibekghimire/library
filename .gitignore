@@ -1,0 +1,76 @@
+# Byte-compiled Python files
+*.pyc
+*.pyo
+__pycache__/
+
+# Django specific
+*.log
+db.sqlite3
+*.pot
+*.py[cod]
+
+# Local environment variables and settings (if any)
+.env
+.env.*
+
+# Secret key files (if used)
+*.key
+
+# Media uploads
+/media/
+
+# Static files (you can ignore or track them based on preference)
+/staticfiles/
+/static/
+
+# Ignore compiled files from build processes
+*.egg-info/
+*.eggs/
+dist/
+build/
+
+# Virtual environment directory
+venv/
+.env/
+env/
+venv.bak/
+libvenv/
+
+# Database files (PostgreSQL won't create files, but SQLite will)
+*.db
+
+# Ignore coverage reports
+coverage_html_report/
+.coverage
+htmlcov/
+
+# Ignore testing logs
+test_reports/
+*.log
+
+# Ignore the IDE settings (specific to IDEs like VSCode, PyCharm, etc.)
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore deployment-related files
+*.pem
+*.crt
+*.key
+
+# Celery beat schedule file
+celerybeat-schedule
+
+# Migrations can be optional, but they are usually tracked.
+# Ignore if you want to handle migrations differently.
+# **/migrations/
+
+# Ignore node modules if using Node.js or frontend tooling
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Ignore .DS_Store and other system-generated files
+.DS_Store
+Thumbs.db
