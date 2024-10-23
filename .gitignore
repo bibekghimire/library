@@ -21,7 +21,7 @@ db.sqlite3
 
 # Static files (you can ignore or track them based on preference)
 /staticfiles/
-/static/
+
 
 # Ignore compiled files from build processes
 *.egg-info/
